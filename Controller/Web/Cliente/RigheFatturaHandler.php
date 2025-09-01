@@ -1,0 +1,22 @@
+<?php
+    class RigheFatturaHandler{
+        private $fatturaModel;
+        public function __construct(FatturaModel $fatturaModel){
+            $this->fatturaModel = $fatturaModel;
+        }
+
+
+        public function show($codiceFattura){
+            $fattura = $this->fatturaModel->selectFattura($codiceFattura);
+            if(!$fattura || $fattura["cf_cliente"] !== $_SESSION["cf"]){
+                header("Location: /cliente/fatture");
+                exit();
+            }
+            $righeFattura = $this->fatturaModel->selectRigheFattura($codiceFattura);
+            $fileCss = "ordini";
+            require("pagine/cliente/headerCliente.php");
+            require("pagine/cliente/righeFattura.php");
+        }
+    }
+    
+?>

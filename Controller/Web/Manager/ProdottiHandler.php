@@ -1,0 +1,16 @@
+<?php
+    class ProdottiHandler{
+        private $prodottoModel;
+
+        public function __construct(ProdottoModel $prodottoModel){
+            $this->prodottoModel = $prodottoModel;
+        }
+
+        public function show(){
+            $prodotti = $this->prodottoModel->selectProdotti();
+            require("pagine/manager/header.php");
+            require("pagine/manager/prodotti.php");
+        }
+    }
+    
+?>
