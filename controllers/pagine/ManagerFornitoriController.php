@@ -8,8 +8,8 @@
 
         public function show(){
             $fornitori = $this->fornitoreModel->selectFornitori($_SESSION["cf"]);
-            require("pagine/manager/header.php");
-            require("pagine/manager/fornitori.php");
+            require("views/manager/header.php");
+            require("views/manager/fornitori.php");
         }
     }
     

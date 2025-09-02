@@ -7,8 +7,8 @@
 
         public function show(){
             $negozi = $this->negozioModel->selectNegozi();
-            require("pagine/cliente/headerCliente.php");
-            require("pagine/cliente/negozi.php");
+            require("views/cliente/headerCliente.php");
+            require("views/cliente/negozi.php");
         }
     }
     

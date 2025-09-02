@@ -34,60 +34,60 @@
 
     //Pagine
     $router->get("/login",function(){
-        require("pagine/login.php");
+        require("views/login.php");
     },"Autenticazione::checkLogin");
 
     $router->get("/manager/clienti",function(){
-        ControllerInit::getController("ClientiHandler")->show();
+        ControllerInit::getController("ManagerClientiController")->show();
     },"Autenticazione::autenticazionePagineManager");
 
     $router->get("/manager/prodotti",function(){
-        ControllerInit::getController("ProdottiHandler")->show();
+        ControllerInit::getController("ManagerProdottiController")->show();
     },"Autenticazione::autenticazionePagineManager");
 
     $router->get("/manager/negozi",function(){
-        ControllerInit::getController("NegoziHandler")->show();
+        ControllerInit::getController("ManagerNegoziController")->show();
     },"Autenticazione::autenticazionePagineManager");
 
     $router->get("/manager/fornitori",function(){
-        ControllerInit::getController("FornitoriHandler")->show();
+        ControllerInit::getController("ManagerFornitoriController")->show();
     },"Autenticazione::autenticazionePagineManager");
 
     $router->get("/manager/ordini",function(){
-        ControllerInit::getController("OrdiniHandler")->show();
+        ControllerInit::getController("ManagerOrdiniController")->show();
     },"Autenticazione::autenticazionePagineManager");
 
     $router->get("/manager/fornitore/{ivaFornitore}",function($ivaFornitore){
-        ControllerInit::getController("GestioneFornitoreHandler")->show($ivaFornitore);
+        ControllerInit::getController("ManagerGestioneFornitoreController")->show($ivaFornitore);
     },"Autenticazione::autenticazionePagineManager");
 
 
     $router->get("/manager/negozio/{codiceNegozio}",function($codiceNegozio){
-        ControllerInit::getController("GestioneNegozioHandler")->show($codiceNegozio);
+        ControllerInit::getController("ManagerGestioneNegozioController")->show($codiceNegozio);
     },"Autenticazione::autenticazionePagineManager");
 
     $router->get("/utente/profilo",function(){
-        ControllerInit::getController("ProfiloHandler")->show();
+        ControllerInit::getController("ProfiloController")->show();
     },"Autenticazione::autenticazionePagineUtente");
 
     $router->get("/cliente/negozi",function(){
-        ControllerInit::getController("NegoziClienteHandler")->show();
+        ControllerInit::getController("ClienteNegoziController")->show();
     },"Autenticazione::autenticazionePagineCliente");
     
     $router->get("/cliente/negozio/{codiceNegozio}",function($codiceNegozio){
-        ControllerInit::getController("ProdottiNegozioClienteHandler")->show($codiceNegozio);
+        ControllerInit::getController("ClienteProdottiNegozioController")->show($codiceNegozio);
     },"Autenticazione::autenticazionePagineCliente");
 
     $router->get("/cliente/carrello",function(){
-        ControllerInit::getController("CarrelloHandler")->show();
+        ControllerInit::getController("ClienteCarrelloController")->show();
     },"Autenticazione::autenticazionePagineCliente");
 
     $router->get("/cliente/fatture",function(){
-        ControllerInit::getController("FattureHandler")->show();
+        ControllerInit::getController("ClienteFattureController")->show();
     },"Autenticazione::autenticazionePagineCliente");
 
     $router->get("/cliente/fatture/{codiceFattura}",function($codiceFattura){
-        ControllerInit::getController("RigheFatturaHandler")->show($codiceFattura);
+        ControllerInit::getController("ClienteRigheFatturaController")->show($codiceFattura);
     },"Autenticazione::autenticazionePagineCliente");
 
     //Login

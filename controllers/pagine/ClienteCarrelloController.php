@@ -33,8 +33,8 @@
                 }
             }
             $sconti = $this->utenteModel->scontiDisponibiliCliente($_SESSION["cf"]);
-            require("pagine/cliente/headerCliente.php");
-            require("pagine/cliente/carrello.php");
+            require("views/cliente/headerCliente.php");
+            require("views/cliente/carrello.php");
         }
     }
     

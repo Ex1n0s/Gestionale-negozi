@@ -11,8 +11,8 @@
         public function show($codiceNegozio){
             $negozio = $this->negozioModel->selectNegozio($codiceNegozio);
             $prodottiNegozio = $this->vendeModel->selectProdottiNegozio($codiceNegozio);
-            require("pagine/cliente/headerCliente.php");
-            require("pagine/cliente/prodottiNegozio.php");
+            require("views/cliente/headerCliente.php");
+            require("views/cliente/prodottiNegozio.php");
         }
     }
     

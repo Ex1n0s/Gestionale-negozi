@@ -8,8 +8,8 @@
 
         public function show(){
             $prodotti = $this->prodottoModel->selectProdotti();
-            require("pagine/manager/header.php");
-            require("pagine/manager/prodotti.php");
+            require("views/manager/header.php");
+            require("views/manager/prodotti.php");
         }
     }
     

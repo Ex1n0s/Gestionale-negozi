@@ -14,8 +14,8 @@
             }
             $righeFattura = $this->fatturaModel->selectRigheFattura($codiceFattura);
             $fileCss = "ordini";
-            require("pagine/cliente/headerCliente.php");
-            require("pagine/cliente/righeFattura.php");
+            require("views/cliente/headerCliente.php");
+            require("views/cliente/righeFattura.php");
         }
     }
     
