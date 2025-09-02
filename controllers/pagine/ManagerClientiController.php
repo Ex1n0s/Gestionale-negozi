@@ -8,8 +8,8 @@
 
         public function show(){
             $clienti = $this->utenteModel->selectUtenti("cliente");
-            require("views/manager/header.php");
-            require("views/manager/clienti.php");
+            require(__DIR__ . "/../../views/manager/header.php");
+            require(__DIR__ . "/../../views/manager/clienti.php");
         }
     }
     

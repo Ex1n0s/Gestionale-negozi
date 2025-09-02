@@ -8,8 +8,8 @@
 
         public function show(){
             $negozi = $this->negozioModel->selectNegozi($_SESSION["cf"]);
-            require("views/manager/header.php");
-            require("views/manager/negozi.php");
+            require(__DIR__ . "/../../views/manager/header.php");
+            require(__DIR__ . "/../../views/manager/negozi.php");
         }
     }
     

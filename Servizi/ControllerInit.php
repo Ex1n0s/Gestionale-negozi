@@ -105,7 +105,7 @@
                     $fatturaModel = new FatturaModel(self::$connessione);
                     return new ClienteFattureController($fatturaModel);
 
-                case "RigheFatturaHandler":
+                case "ClienteRigheFatturaController":
                     $fatturaModel = new FatturaModel(self::$connessione);
                     return new ClienteRigheFatturaController($fatturaModel);
                     

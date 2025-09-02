@@ -7,8 +7,8 @@
 
         public function show(){
             $negozi = $this->negozioModel->selectNegozi();
-            require("views/cliente/headerCliente.php");
-            require("views/cliente/negozi.php");
+            require(__DIR__ . "/../../views/cliente/headerCliente.php");
+            require(__DIR__ . "/../../views/cliente/negozi.php");
         }
     }
     

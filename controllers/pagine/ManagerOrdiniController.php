@@ -9,8 +9,8 @@
         public function show(){
             $ordini = $this->ordineModel->selectOrdini($_SESSION["cf"]);
             $fileCss = "ordini";
-            require("views/manager/header.php");
-            require("views/manager/ordini.php");
+            require(__DIR__ . "/../../views/manager/header.php");
+            require(__DIR__ . "/../../views/manager/ordini.php");
         }
     }
     

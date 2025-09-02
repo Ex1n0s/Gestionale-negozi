@@ -36,7 +36,7 @@
         }
 
         public function updateUtente($codiceFiscale,$valori){
-            if(!empty([$valori["password"]])){
+            if(!empty($valori["password"])){
                 $valori["password"] = password_hash($valori["password"],PASSWORD_DEFAULT);
             }
             try{  

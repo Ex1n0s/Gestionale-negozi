@@ -11,11 +11,11 @@
             $tessera = $this->utenteModel->selectTesseraCliente($_SESSION["cf"]);
             $fileCss = "profilo";
             if($_SESSION["ruolo"] === "manager"){
-                require("views/manager/header.php");
+                require(__DIR__ . "/../../views/manager/header.php");
             } else {
-                require("views/cliente/headerCliente.php");
+                require(__DIR__ . "/../../views/cliente/headerCliente.php");
             }
-            require("views/profilo.php");
+            require(__DIR__ . "/../../views/profilo.php");
         }
     }
     

@@ -19,8 +19,8 @@
             $prodotti = $this->prodottoModel->selectProdotti();
             $prodottiFornitore = $this->fornisceModel->selectProdottiFornitore($ivaFornitore);
             $fileCss = "gestione";
-            require("views/manager/header.php");
-            require("views/manager/gestioneFornitore.php");
+            require(__DIR__ . "/../../views/manager/header.php");
+            require(__DIR__ . "/../../views/manager/gestioneFornitore.php");
         }
     }
     

@@ -19,8 +19,8 @@
             $prodotti = $this->prodottoModel->selectProdotti();
             $prodottiNegozio = $this->vendeModel->selectProdottiNegozio($codiceNegozio);
             $fileCss = "gestione";
-            require("views/manager/header.php");
-            require("views/manager/gestioneNegozio.php");
+            require(__DIR__ . "/../../views/manager/header.php");
+            require(__DIR__ . "/../../views/manager/gestioneNegozio.php");
         }
     }
     

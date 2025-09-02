@@ -66,7 +66,6 @@
                     }
                 }
             }
-            header("Location: /login");
         }
     }
 

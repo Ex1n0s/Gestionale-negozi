@@ -8,8 +8,8 @@
         public function show(){
             $fatture = $this->fatturaModel->selectFatture($_SESSION["cf"]);
             $fileCss = "ordini";
-            require("views/cliente/headerCliente.php");
-            require("views/cliente/fatture.php");
+            require(__DIR__ . "/../../views/cliente/headerCliente.php");
+            require(__DIR__ . "/../../views/cliente/fatture.php");
         }
     }
     
