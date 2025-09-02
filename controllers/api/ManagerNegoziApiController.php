@@ -1,5 +1,5 @@
 <?php
-    class Negozi{
+    class ManagerNegoziApiController{
         private $negozioModel;
 
         public function __construct(NegozioModel $negozioModel){

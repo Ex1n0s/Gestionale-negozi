@@ -1,5 +1,5 @@
 <?php
-    class Ordini{
+    class ManagerOrdiniApiController{
         private $ordineModel;
         private $negozioModel;
         public function __construct(OrdineModel $ordineModel,NegozioModel $negozioModel){

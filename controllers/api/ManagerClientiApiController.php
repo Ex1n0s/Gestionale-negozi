@@ -1,5 +1,5 @@
 <?php
-    class Clienti{
+    class ManagerClientiApiController{
         private $utenteModel;
 
         public function __construct(UtenteModel $utenteModel){

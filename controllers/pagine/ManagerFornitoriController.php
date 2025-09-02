@@ -1,5 +1,5 @@
 <?php
-    class FornitoriHandler{
+    class ManagerFornitoriController{
         private $fornitoreModel;
 
         public function __construct(FornitoreModel $fornitoreModel){

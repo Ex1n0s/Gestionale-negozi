@@ -66,7 +66,7 @@
                     }
                 }
             }
-            require("pagine/manager/404.php");
+            header("Location: /login");
         }
     }
 

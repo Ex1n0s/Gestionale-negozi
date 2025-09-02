@@ -1,5 +1,5 @@
 <?php
-    class Login{
+    class LoginApiController{
         private $utenteModel;
 
         public function __construct(UtenteModel $utenteModel){

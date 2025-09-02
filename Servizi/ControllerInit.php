@@ -14,100 +14,100 @@
                     $vendeModel = new VendeModel(self::$connessione);
                     $negozioModel = new NegozioModel(self::$connessione);
                     $utenteModel = new UtenteModel(self::$connessione);
-                    return new CarrelloHandler($vendeModel,$negozioModel,$utenteModel);
+                    return new ClienteCarrelloController($vendeModel,$negozioModel,$utenteModel);
 
                 case "ProdottiNegozioClienteHandler":
                     $negozioModel = new NegozioModel(self::$connessione);
                     $vendeModel = new VendeModel(self::$connessione);
-                    return new ProdottiNegozioClienteHandler($negozioModel,$vendeModel);
+                    return new ClienteProdottiNegozioController($negozioModel,$vendeModel);
 
                 case "ProfiloHandler":
                     $utenteModel = new UtenteModel(self::$connessione);
-                    return new ProfiloHandler($utenteModel);
+                    return new ProfiloController($utenteModel);
 
                 case "OrdiniHandler":
                     $ordineModel = new OrdineModel(self::$connessione);
-                    return new OrdiniHandler($ordineModel);
+                    return new ManagerOrdiniController($ordineModel);
 
                 case "ClientiHandler":
                     $utenteModel = new UtenteModel(self::$connessione);
-                    return new ClientiHandler($utenteModel);
+                    return new ManagerClientiController($utenteModel);
 
                 case "GestioneNegozioHandler":
                     $negozioModel = new NegozioModel(self::$connessione);
                     $vendeModel = new VendeModel(self::$connessione);
                     $prodottoModel = new ProdottoModel(self::$connessione);
-                    return new GestioneNegozioHandler($negozioModel,$prodottoModel,$vendeModel);
+                    return new ManagerGestioneNegozioController($negozioModel,$prodottoModel,$vendeModel);
 
                 case "GestioneFornitoreHandler":
                     $fornitoreModel = new FornitoreModel(self::$connessione);
                     $fornisceModel = new FornisceModel(self::$connessione);
                     $prodottoModel = new ProdottoModel(self::$connessione);
-                    return new GestioneFornitoreHandler($fornitoreModel,$prodottoModel,$fornisceModel);
+                    return new ManagerGestioneFornitoreController($fornitoreModel,$prodottoModel,$fornisceModel);
 
                 case "ProdottiHandler":
                     $prodottoModel = new ProdottoModel(self::$connessione);
-                    return new ProdottiHandler($prodottoModel);
+                    return new ManagerProdottiController($prodottoModel);
 
                 case "NegoziHandler":
                     $negozioModel = new NegozioModel(self::$connessione);
-                    return new NegoziHandler($negozioModel);
+                    return new ManagerNegoziController($negozioModel);
 
                 case "NegoziClienteHandler":
                     $negozioModel = new NegozioModel(self::$connessione);
-                    return new NegoziClienteHandler($negozioModel);
+                    return new ClienteNegoziController($negozioModel);
 
                 case "FornitoriHandler":
                     $fornitoreModel = new FornitoreModel(self::$connessione);
-                    return new FornitoriHandler($fornitoreModel);
+                    return new ManagerFornitoriController($fornitoreModel);
 
                 case "Clienti":
                     $utenteModel = new UtenteModel(self::$connessione);
-                    return new Clienti($utenteModel);
+                    return new ManagerClientiApiController($utenteModel);
 
                 case "Login":
                     $utenteModel = new UtenteModel(self::$connessione);
-                    return new Login($utenteModel);
+                    return new LoginApiController($utenteModel);
 
                 case "Prodotti":
                     $prodottoModel = new ProdottoModel(self::$connessione);
-                    return new Prodotti($prodottoModel);
+                    return new ManagerProdottiApiController($prodottoModel);
 
                 case "Negozi":
                     $negozioModel = new NegozioModel(self::$connessione);
-                    return new Negozi($negozioModel);   
+                    return new ManagerNegoziApiController($negozioModel);   
 
                 case "ProdottiNegozio":
                     $vendeModel = new VendeModel(self::$connessione);
                     $negozioModel = new NegozioModel(self::$connessione);
-                    return new ProdottiNegozio($vendeModel,$negozioModel);
+                    return new ManagerProdottiNegozioApiController($vendeModel,$negozioModel);
 
                 case "ProdottiFornitore":
                     $fornisceModel = new FornisceModel(self::$connessione);
                     $fornitoreModel = new FornitoreModel(self::$connessione);
-                    return new ProdottiFornitore($fornisceModel,$fornitoreModel);
+                    return new ManagerProdottiFornitoreApiController($fornisceModel,$fornitoreModel);
 
                 case "Ordini":
                     $ordineModel = new OrdineModel(self::$connessione);
                     $negozioModel = new NegozioModel(self::$connessione);
-                    return new Ordini($ordineModel,$negozioModel); 
+                    return new ManagerOrdiniApiController($ordineModel,$negozioModel); 
 
                 case "Fornitori":
                     $fornitoreModel = new FornitoreModel(self::$connessione);
-                    return new Fornitori($fornitoreModel);    
+                    return new ManagerFornitoriApiController($fornitoreModel);    
 
                 case "Fatture":
                     $fatturaModel = new FatturaModel(self::$connessione);
                     $acquistoModel = new AcquistoModel(self::$connessione);
-                    return new Fatture($fatturaModel,$acquistoModel); 
+                    return new ClienteFattureApiController($fatturaModel,$acquistoModel); 
                 
                 case "FattureHandler":
                     $fatturaModel = new FatturaModel(self::$connessione);
-                    return new FattureHadler($fatturaModel);
+                    return new ClienteFattureController($fatturaModel);
 
                 case "RigheFatturaHandler":
                     $fatturaModel = new FatturaModel(self::$connessione);
-                    return new RigheFatturaHandler($fatturaModel);
+                    return new ClienteRigheFatturaController($fatturaModel);
                     
                 default:
                     break;

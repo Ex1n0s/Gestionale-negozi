@@ -1,14 +1,10 @@
 <?php
     spl_autoload_register(function($nomeFile){
         $percorsi = [
-            "Servizi",
-            "Model",
-            "Controller/Api",
-            "Controller/Api/Manager",
-            "Controller/Api/Cliente",
-            "Controller/Web",
-            "Controller/Web/Manager",
-            "Controller/Web/Cliente"
+            "servizi",
+            "models",
+            "controllers/api",
+            "controllers/pagine",
         ];
         foreach ($percorsi as $percorso) {
             $percorso = "{$percorso}/{$nomeFile}.php";
@@ -284,17 +280,17 @@
     //CARRELLO
     $router->delete("/api/cliente/carrello/{numeroProdotto}",function($numeroProdotto){
         header("Content-Type:application/json");
-        new Carrello()->deleteElementoCarrello($numeroProdotto);
+        new ClienteCarrelloApiController()->deleteElementoCarrello($numeroProdotto);
     },"Autenticazione::autenticazioneApiCliente");
 
     $router->post("/api/cliente/carrello",function(){
         header("Content-Type:application/json");
-        new Carrello()->postElementoCarrello();
+        new ClienteCarrelloApiController()->postElementoCarrello();
     },"Autenticazione::autenticazioneApiCliente");
 
     $router->put("/api/cliente/carrello/{numeroProdotto}",function($numeroProdotto){
         header("Content-Type:application/json");
-        new Carrello()->putElementoCarrello($numeroProdotto);
+        new ClienteCarrelloApiController()->putElementoCarrello($numeroProdotto);
     },"Autenticazione::autenticazioneApiCliente");
 
     //Fatture

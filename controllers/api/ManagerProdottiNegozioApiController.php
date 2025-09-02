@@ -1,5 +1,5 @@
 <?php
-    class ProdottiNegozio{
+    class ManagerProdottiNegozioApiController{
         private $vendeModel;
         private $negozioModel;
 

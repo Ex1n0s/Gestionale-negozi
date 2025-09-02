@@ -1,5 +1,5 @@
 <?php
-    class ProdottiFornitore{
+    class ManagerProdottiFornitoreApiController{
         private $fornisceModel;
         private $fornitoreModel;
 

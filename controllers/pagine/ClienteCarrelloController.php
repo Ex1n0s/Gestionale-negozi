@@ -1,5 +1,5 @@
 <?php
-    class CarrelloHandler{
+    class ClienteCarrelloController{
         private $vendeModel;
         private $negozioModel;
         private $utenteModel;

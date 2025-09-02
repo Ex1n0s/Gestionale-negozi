@@ -63,7 +63,7 @@
                 header("Location: /manager/clienti");
                 exit();
             } elseif($_SESSION["ruolo"] === "cliente"){
-                header("Location: /cliente/homeCliente.php");  
+                header("Location: /cliente/negozi");  
                 exit();  
             }
         }

@@ -1,5 +1,5 @@
 <?php
-    class Carrello{
+    class ClienteCarrelloApiController{
 
         public function deleteElementoCarrello($numero){
             if(!isset($_SESSION["carrello"][$numero])){

@@ -1,5 +1,5 @@
 <?php
-    class Fatture{
+    class ClienteFattureApiController{
         private $fatturaModel;
         private $acquistoModel;
 

@@ -1,5 +1,5 @@
 <?php
-    class ProfiloHandler{
+    class ProfiloController{
         private $utenteModel;
 
         public function __construct(utenteModel $utenteModel){

@@ -1,5 +1,5 @@
 <?php
-    class ProdottiNegozioClienteHandler{
+    class ClienteProdottiNegozioController{
         private $negozioModel;
         private $vendeModel;
         public function __construct(NegozioModel $negozioModel,VendeModel $vendeModel){

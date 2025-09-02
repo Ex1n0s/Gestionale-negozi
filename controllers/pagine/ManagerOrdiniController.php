@@ -1,5 +1,5 @@
 <?php
-    class OrdiniHandler{
+    class ManagerOrdiniController{
         private $ordineModel;
 
         public function __construct(OrdineModel $ordineModel){

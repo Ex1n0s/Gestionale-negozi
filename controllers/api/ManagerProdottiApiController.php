@@ -1,5 +1,5 @@
 <?php
-    class Prodotti{
+    class ManagerProdottiApiController{
         private $prodottoModel;
 
         public function __construct(ProdottoModel $prodottoModel){

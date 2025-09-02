@@ -1,5 +1,5 @@
 <?php
-    class RigheFatturaHandler{
+    class ClienteRigheFatturaController{
         private $fatturaModel;
         public function __construct(FatturaModel $fatturaModel){
             $this->fatturaModel = $fatturaModel;
