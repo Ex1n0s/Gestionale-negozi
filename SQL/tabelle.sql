@@ -107,4 +107,3 @@ create table ordine (
 	codice_prodotto VARCHAR(10) not null references prodotto(codice) on update cascade on delete no action,
 	codice_negozio VARCHAR(10) not null references negozio(codice) on update cascade on delete no action
 );
-
