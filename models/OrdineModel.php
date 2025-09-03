@@ -18,6 +18,9 @@
                 if($e->getCode() === "P0001"){
                     $this->messaggio = "Prodotto non disponibile da nessun fornitore";
                     return false;
+                } else if ($e->getCode() === "23514"){
+                    $this->messaggio = "La quantità minima per un ordine e' 1";
+                    return false;
                 } else {
                     throw new RuntimeException();
                 }

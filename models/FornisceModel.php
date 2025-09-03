@@ -24,7 +24,10 @@
                 } else if ($e->getCode() === "P0001"){
                     $this->messaggio = "Il fornitore e' chiuso";
                     return false;
-                } else {
+                } else if ($e->getCode() === "23514"){
+                    $this->messaggio = "E' stato inserito un valore non valido";
+                    return false;
+                }else {
                     throw new RuntimeException($e->getCode());
                 }
             }
@@ -105,6 +108,9 @@
             } catch (PDOException $e) {
                 if($e->getCode() === "23505"){
                     $this->messaggio = "Il fornitore fornisce gia' questo prodotto";
+                    return false;
+                } else if ($e->getCode() === "23514"){
+                    $this->messaggio = "E' stato inserito un valore non valido";
                     return false;
                 } else {
                     throw new RuntimeException();
