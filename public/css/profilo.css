@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #292929;
+}
+
+body{
+    margin-top: 70px;
+}
+
+svg{
+    align-self:flex-end;
+    min-width: 20px;
+    min-height: 20px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    height: 100%;
+    line-height: 48px;
+    font-size: 13px;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(20px);
+    background-color: #ffffffd3;
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+}
+
+.card-deck{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 40px;
+    padding: 30px;
+    min-height: 500px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    width: 30%;
+}
+
+
+.card-input {
+    width: 100%;
+    padding: 12px 24px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #111827;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-top: 6px;
+}
+
+.card-button{
+    padding: 6px 12px;
+    background-color: #fff;
+    color: #0071e3;
+    border-style: solid;
+    border-color: #0071e3;
+    border-width:1px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 100ms ease-in;
+    align-self: center;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.card-button.elimina{
+    border-color: #da5103;
+    color: #da5103;
+}
+
+.card-button:hover {
+    background-color: #0071e3;
+    color: #fff;
+}
+
+@media (max-width: 1300px) {
+    .card {
+        width: 68%;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 90%;
+    }
+}
+
+

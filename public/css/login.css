@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #292929;
+}
+
+.form{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    min-height: 560px;
+    height: fit-content;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #111827;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-top: 6px;
+}
+
+#ruolo{
+    padding: 6px 12px;
+    width: fit-content;
+}
+
+input:focus{
+    outline: 1px solid #0071e3; 
+}
+.form-button:hover {
+    background-color: #0071e3;
+    color: #fff;
+}
+
+.form-button,.header-button{
+    width: 70%;
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #0071e3;
+    border-style: solid;
+    border-color: #0071e3;
+    border-width:1px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 100ms ease-in;
+    align-self: center;
+}
+
+@media (max-width: 700px) {
+    .form{
+        width: 90%;
+    }
+}
