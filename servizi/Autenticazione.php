@@ -6,7 +6,7 @@
             self::$connessione = $connessione;
         }
         
-        static private function checkDb($ruolo){
+        private static function checkDb($ruolo){
             switch ($ruolo) {
                 case "manager":
                     $query = "SELECT * FROM manager WHERE cf_utente = ?";
