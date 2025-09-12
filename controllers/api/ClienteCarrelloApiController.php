@@ -26,6 +26,7 @@
             $_SESSION["carrello"][$numero]["quantita"] += $quantita;
             if($_SESSION["carrello"][$numero]["quantita"] <= 0){
                unset($_SESSION["carrello"][$numero]);
+               $_SESSION["carrello"] = array_values($_SESSION['carrello']);
             } 
             json_encode(["messaggio"=>"Prodotto aggiornato"]);
         }
